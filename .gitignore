@@ -4,3 +4,4 @@ dist
 .cursor
 wps-addon-build
 wps-addon-publish
+.DS_Store
