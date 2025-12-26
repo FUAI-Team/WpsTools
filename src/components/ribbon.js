@@ -61,7 +61,8 @@ function OnAction(control) {
         let tsId = window.Application.PluginStorage.getItem('taskpane_id')
         if (!tsId) {
           // let tskpane = window.Application.CreateTaskPane(Util.GetUrlPath() + Util.GetRouterHash() + '/taskpane')
-          let tskpane = window.Application.CreateTaskPane('http://106.14.57.9/jsplugindir/index.html')
+          // let tskpane = window.Application.CreateTaskPane('http://106.14.57.9/jsplugindir/index.html')
+          let tskpane = window.Application.CreateTaskPane('http://172.16.167.83:3000/')
           let id = tskpane.ID
           window.Application.PluginStorage.setItem('taskpane_id', id)
           tskpane.Visible = true

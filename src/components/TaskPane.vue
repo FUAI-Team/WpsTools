@@ -1,29 +1,13 @@
 <template>
   <div class="global">
-    <div class="divItem">
-      这是一个网页，按<span style="font-weight: bolder">"F12"</span>可以打开调试器。
+    <div class="iframe-container">
+      <!-- 公网没办法访问局域网中的资源 -->
+      <!-- <iframe src="http://172.16.167.83:3000/" frameborder="0" class="web-iframe"></iframe> -->
     </div>
-    <div class="divItem">
-      这个示例展示了wps加载项的相关基础能力，与B/S业务系统的交互，请用浏览器打开：
-      <span style="font-weight: bolder; color: slateblue; cursor: pointer" @click="onOpenWeb()">{{
-        DemoSpan
-      }}</span>
-    </div>
-    <div class="divItem">
-      开发文档:
-      <span style="font-weight: bolder; color: slateblue">https://open.wps.cn/docs/office</span>
-    </div>
-    <hr />
-    <div class="divItem">
+    <div class="button-container">
       <button style="margin: 3px" @click="onbuttonclick('dockLeft')">停靠左边</button>
       <button style="margin: 3px" @click="onbuttonclick('dockRight')">停靠右边</button>
       <button style="margin: 3px" @click="onbuttonclick('hideTaskPane')">隐藏TaskPane</button>
-      <button style="margin: 3px" @click="onbuttonclick('addString')">文档开头添加字符串</button>
-      <button style="margin: 3px" @click="onDocNameClick()">取文件名</button>
-    </div>
-    <hr />
-    <div class="divItem">
-      文档文件名为：<span>{{ docName }}</span>
     </div>
   </div>
 </template>
@@ -70,5 +54,23 @@ onMounted(() => {
   margin-bottom: 18px;
   font-size: 15px;
   word-wrap: break-word;
+}
+.iframe-container {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+.web-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.button-container {
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
 }
 </style>
