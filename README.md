@@ -29,6 +29,8 @@ https://open.wps.cn/previous/docs/client/wpsLoad
 
 1. **新建项目**：`wpsjs create 项目名`
 
+2. **测试项目**: `wpsjs debug`
+
 2. **发布项目**：`wpsjs publish`
    - 输入服务器地址（即加载项实际存放地址，此输入兼容https和http协议）：`http://106.14.57.9/jsplugindir/`
    - 选择"在线模式"
