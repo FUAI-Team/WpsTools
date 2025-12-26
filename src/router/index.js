@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: '默认页',
-      component: () => import('../components/Root.vue')
+      component: () => import('../components/TaskPane.vue')
     },
     {
       path: '/dialog',
